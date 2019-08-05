@@ -13,15 +13,11 @@ class URI_1024{
 			string str = Console.ReadLine();
 			string str_aux = "";
 
-			for(int j = 0; j < str.Length; j++){
-				if(
-					((int)str[j] >= minmin && (int)str[j] <= minmax) ||
-					((int)str[j] >= maxmin && (int)str[j] <= maxmax)
-				)
+			for(int j = 0; j < str.Length; j++)
+				if(((int)str[j] >= minmin && (int)str[j] <= minmax) || ((int)str[j] >= maxmin && (int)str[j] <= maxmax))
 					str_aux += (char)(str[j] + 3);
 				else
 					str_aux += str[j];
-			}
 
 			str = str_aux;
 			str_aux = "";
@@ -30,12 +26,11 @@ class URI_1024{
 
 			str = str_aux;
 			str_aux = "";
-			for(int j = 0; j < str.Length; j++){
+			for(int j = 0; j < str.Length; j++)
 				if(j < str.Length/2)
 					str_aux += str[j];
 				else
 					str_aux += (char)(str[j] - 1);
-			}
 
 			Console.WriteLine(str_aux);
 		}
